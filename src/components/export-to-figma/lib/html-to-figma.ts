@@ -184,9 +184,6 @@ export const htmlToFigma = (selector: HTMLElement | string = "body", useFrames =
 										) {
 											const rgb = getRgb(color);
 											if (rgb) {
-
-												debugger;
-
 												const width = ["top", "bottom"].includes(dir)
 													? rect.width
 													: parseFloat(borderWidth);
@@ -391,7 +388,6 @@ export const htmlToFigma = (selector: HTMLElement | string = "body", useFrames =
 					} as WithRef<TextNode>;
 
 					const fills: SolidPaint[] = [];
-					console.log(computedStyles)
 					const rgb = getRgb(computedStyles.color);
 
 					if (rgb) {
