@@ -1,6 +1,6 @@
 {
   "name": "htmltofigma",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "BEHOLD, a way to export shadow dom components into Figma.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
