@@ -42,8 +42,10 @@ export class ExportToFigma implements ComponentInterface {
       downloadAnchorNode.remove();
     }
 
-    // @ts-ignore
-    download(layers, `${this.element.tagName.toLowerCase()}`);
+    if (layers) {
+      // @ts-ignore
+      download(layers, `${this.element.tagName.toLowerCase()}`);
+    }
   }
 
   render() {
