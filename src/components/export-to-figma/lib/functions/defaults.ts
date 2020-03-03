@@ -1,0 +1,32 @@
+export const defaults: any = (color) => {
+	return {
+		transform: "none",
+		opacity: "1",
+		borderRadius: "0px",
+		backgroundImage: "none",
+		backgroundPosition: "0% 0%",
+		backgroundSize: "auto",
+		backgroundColor: "rgba(0, 0, 0, 0)",
+		backgroundAttachment: "scroll",
+		border: "0px none " + color,
+		borderTop: "0px none " + color,
+		borderBottom: "0px none " + color,
+		borderLeft: "0px none " + color,
+		borderRight: "0px none " + color,
+		borderWidth: "0px",
+		borderColor: color,
+		borderStyle: "none",
+		boxShadow: "none",
+		fontWeight: "400",
+		textAlign: "start",
+		justifyContent: "normal",
+		alignItems: "normal",
+		alignSelf: "auto",
+		flexGrow: "0",
+		textDecoration: "none solid " + color,
+		lineHeight: "normal",
+		letterSpacing: "normal",
+		backgroundRepeat: "repeat",
+		zIndex: "auto" // TODO
+	}
+};

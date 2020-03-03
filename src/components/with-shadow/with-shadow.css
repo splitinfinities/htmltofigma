@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  background: red;
+}
+
+:host p {
+  color: yellow;
+}
+
+:host ::slotted(p) {
+  color: pink !important;
+}
