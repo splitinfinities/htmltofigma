@@ -465,14 +465,18 @@ export const htmlToFigma = (selector: HTMLElement | string = "body", useFrames =
 
 	const computedStyle = getComputedStyle(el);
 
-	const rgb = getRgb(computedStyle.backgroundColor)
-	delete rgb.a
+	let backgrounds: Paint[] = [];
 
-	const background: Paint = {
-		type: "SOLID",
-		color: rgb,
-		visible: true,
-		opacity: Number(computedStyle.opacity)
+	const rgb = getRgb(computedStyle.backgroundColor)
+	if (rgb) {
+		delete rgb.a
+
+		backgrounds = [{
+			type: "SOLID",
+			color: rgb,
+			visible: true,
+			opacity: Number(computedStyle.opacity)
+		}]
 	}
 
 	// TODO: send frame: { children: []}
@@ -485,7 +489,7 @@ export const htmlToFigma = (selector: HTMLElement | string = "body", useFrames =
 		x: 0,
 		y: 0,
 		ref: el,
-		backgrounds: [background]
+		backgrounds
 	} as WithRef<FrameNode>;
 
 	layers.unshift(root);
