@@ -531,5 +531,9 @@ export const htmlToFigma = (selector: HTMLElement | string = "body", useFrames =
 		console.timeEnd("Parse dom");
 	}
 
-	return (layers.length !== 0) ? { "layers": layers } : false;
+	if (layers.length === 1 && layers[0].width === 0 && layers[0].height === 0) {
+		return false
+	}
+
+	return { "layers": layers };
 }
